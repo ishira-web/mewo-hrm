@@ -20,23 +20,23 @@ export default function CandidateDashboard() {
   if (!user) return null;
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="bg-white shadow">
+    <div className="min-h-screen bg-slate-950">
+      <nav className="bg-slate-900 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="shrink-0 flex items-center">
-                <h1 className="text-xl font-bold text-blue-600">HR System</h1>
+                <h1 className="text-xl font-bold text-blue-500">HR System</h1>
               </div>
             </div>
             <div className="flex items-center">
-              <span className="text-gray-700 mr-4">Welcome, {user.full_name}</span>
+              <span className="text-slate-300 mr-4">Welcome, {user.full_name}</span>
               <button
                 onClick={() => {
                   localStorage.clear();
                   router.push('/auth/login');
                 }}
-                className="text-sm text-red-600 hover:text-red-500"
+                className="text-sm text-red-500 hover:text-red-400"
               >
                 Logout
               </button>
@@ -49,7 +49,7 @@ export default function CandidateDashboard() {
         <div className="px-4 py-6 sm:px-0">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Card 1: Resume Analysis */}
-            <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="bg-slate-900 overflow-hidden shadow rounded-lg border border-slate-800">
               <div className="p-5">
                 <div className="flex items-center">
                   <div className="shrink-0 bg-blue-500 rounded-md p-3">
@@ -60,15 +60,15 @@ export default function CandidateDashboard() {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">Resume Analysis</dt>
+                      <dt className="text-sm font-medium text-slate-400 truncate">Resume Analysis</dt>
                       <dd>
-                        <div className="text-lg font-medium text-gray-900">Check Score</div>
+                        <div className="text-lg font-medium text-white">Check Score</div>
                       </dd>
                     </dl>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-5 py-3">
+              <div className="bg-slate-800/50 px-5 py-3">
                 <div className="text-sm">
                   <Link href="/candidate/resume-analyzer" className="font-medium text-blue-700 hover:text-blue-900">
                     Analyze Resume &rarr;
@@ -78,7 +78,7 @@ export default function CandidateDashboard() {
             </div>
 
             {/* Card 2: Job Search */}
-            <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="bg-slate-900 overflow-hidden shadow rounded-lg border border-slate-800">
               <div className="p-5">
                 <div className="flex items-center">
                   <div className="shrink-0 bg-green-500 rounded-md p-3">
@@ -88,17 +88,17 @@ export default function CandidateDashboard() {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">Find Jobs</dt>
+                      <dt className="text-sm font-medium text-slate-400 truncate">Find Jobs</dt>
                       <dd>
-                        <div className="text-lg font-medium text-gray-900">Browse Openings</div>
+                        <div className="text-lg font-medium text-white">Browse Openings</div>
                       </dd>
                     </dl>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-5 py-3">
+              <div className="bg-slate-800/50 px-5 py-3">
                 <div className="text-sm">
-                  <Link href="/candidate/jobs" className="font-medium text-green-700 hover:text-green-900">
+                  <Link href="/candidate/jobs" className="font-medium text-green-400 hover:text-green-300">
                     View Jobs &rarr;
                   </Link>
                 </div>
@@ -106,7 +106,7 @@ export default function CandidateDashboard() {
             </div>
 
             {/* Card 3: Applications */}
-            <div className="bg-white overflow-hidden shadow rounded-lg">
+            <div className="bg-slate-900 overflow-hidden shadow rounded-lg border border-slate-800">
               <div className="p-5">
                 <div className="flex items-center">
                   <div className="shrink-0 bg-purple-500 rounded-md p-3">
@@ -116,17 +116,17 @@ export default function CandidateDashboard() {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">My Applications</dt>
+                      <dt className="text-sm font-medium text-slate-400 truncate">My Applications</dt>
                       <dd>
-                        <div className="text-lg font-medium text-gray-900">Track Status</div>
+                        <div className="text-lg font-medium text-white">Track Status</div>
                       </dd>
                     </dl>
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-5 py-3">
+              <div className="bg-slate-800/50 px-5 py-3">
                 <div className="text-sm">
-                  <Link href="/candidate/applications" className="font-medium text-purple-700 hover:text-purple-900">
+                  <Link href="/candidate/applications" className="font-medium text-purple-400 hover:text-purple-300">
                     View &rarr;
                   </Link>
                 </div>
