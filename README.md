@@ -1,5 +1,12 @@
 # 🚀 AI-Powered HR System
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Spacy](https://img.shields.io/badge/Spacy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
 A next-generation Applicant Tracking System (ATS) and HR management platform powered by Artificial Intelligence. Streamline your recruitment process with automated resume scoring, real-time tracking, and smart analytics.
 
 
