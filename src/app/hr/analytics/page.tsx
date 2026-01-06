@@ -42,7 +42,16 @@ export default function HRAnalyticsPage() {
 
   return (
     <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 px-4 sm:px-0">Recruitment Analytics</h2>
+      <div className="flex justify-between items-center mb-8 px-4 sm:px-0">
+        <h2 className="text-3xl font-bold text-gray-900">Recruitment Analytics</h2>
+        <a
+          href="http://localhost:5000/api/export/applications"
+          download
+          className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700"
+        >
+          Export CSV
+        </a>
+      </div>
       
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 mb-8">
         <div className="bg-white overflow-hidden shadow rounded-lg">
