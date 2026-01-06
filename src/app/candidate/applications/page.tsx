@@ -3,10 +3,45 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useSocket } from '../../../context/SocketContext';
 
 export default function MyApplicationsPage() {
   const [applications, setApplications] = useState<any[]>([]);
   const router = useRouter();
+  const socket = useSocket();
+
+  useEffect(() => {
+    if (socket) {
+        // We need the user ID to join the room. 
+        // For MVP, we decode token or just assume backend knows based on connection, 
+        // but our socket service expects 'join_user' event.
+        const token = localStorage.getItem('token');
+        if (token) {
+             // simplified decode
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                const payload = JSON.parse(jsonPayload);
+                socket.emit('join_user', payload.id);
+            } catch (e) { console.error(e); }
+        }
+
+        socket.on('application_status_changed', (data: any) => {
+            // Update local state
+             setApplications(prev => prev.map(app => 
+                app.id === data.applicationId ? { ...app, stage: data.status } : app
+            ));
+            alert(`Application status updated to: ${data.status}`);
+        });
+
+        return () => {
+            socket.off('application_status_changed');
+        };
+    }
+  }, [socket]);
 
   useEffect(() => {
     const fetchApplications = async () => {
