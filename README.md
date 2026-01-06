@@ -2,7 +2,7 @@
 
 A next-generation Applicant Tracking System (ATS) and HR management platform powered by Artificial Intelligence. Streamline your recruitment process with automated resume scoring, real-time tracking, and smart analytics.
 
-![Dark Mode UI](https://placehold.co/1200x600/0f172a/3b82f6?text=AI-Powered+HR+System+Dark+Mode)
+
 
 ## ✨ Key Features
 
